@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Coffee Shop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'styles/contact.css')}}">
+    <script defer src="{{ url_for('static', filename = 'js/contact.js')}}"></script>
+</head>
+<body style="background-image: url('{{ url_for('static', filename='contact wp.jpeg') }}');">
+    <header>
+        <div class="containerr">
+            <a href="{{ url_for ('home' )}}" class="logo">
+                <img decoding="async" src=" {{ url_for ('static', filename = 'logo.png' )}}" alt="Logo" />  
+              </a>
+              <nav>
+              
+                <ul>
+                    <li><a class="active" href="{{ url_for ('home' )}}">Home</a></li>
+                    <!-- <li><a href="index.html">Menu</a></li> -->
+                    <li><a href="{{ url_for ('contact')}}">contact</a></li>
+                    <!-- <li><a href="{{ url_for ('login')}}">login</a></li> -->
+                    <li><a href="{{ url_for ('logout')}}">logout</a></li>
+                </ul>
+            </nav>
+            <div class="form">
+                <form action="#" method="GET">
+                    <input type="text" placeholder="Search..." name="search" aria-label="Search" />
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <div class="contact">
+        <div class="container">
+            <div class="mainheading">
+                <h2>Contact Us</h2>
+                <p>Feel free to reach out for any inquiries or just to say hello. We are always happy to serve you!</p>
+            </div>
+            <div class="content">
+                <!-- Flash message display -->
+                <!-- {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                    <ul class="flashes">
+                      {% for message in messages %}
+                        <li>{{ message }}</li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                {% endwith %} -->
+
+                <form id="contactForm" method="POST" action="#">
+                    <input class="main-input" type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input class="main-input" type="email" id="email" name="email" placeholder="Your Email" required>
+                    <textarea class="main-input" id="message" name="message" placeholder="Your Message" required></textarea>
+                    <input type="submit" value="Send Message">
+                </form>
+                <div class="info">
+                    <h4>Get in touch</h4>
+                    <span><div class="phone">+0123456789</div></span>
+                    <span><div class="phone">+0119865321</div></span>
+                    <h4>Where We Are</h4>
+                    <address><br/>Cairo, Nasr city<br/>123,456,789<br/>EGY</address>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/style.css') }}">
+    <script src="{{ url_for('static' , filename='js/r.js') }}"></script>
+</head>
+<body> 
+
+    <header>
+        <div class="container">
+          <!-- <a href="omar.html" class="logo">
+            <img decoding="async" src="—Pngtree—coffee icon icon element_7186003.png" alt="Logo" /> -->
+            
+    
+          </a>
+          <nav>
+          
+            <ul>
+              <li><a class="active" href="omar.html">Home</a></li>
+              <li><a href="index.html">Menu</a></li>
+              <li><a href="coffee.html">contact</a></li>
+       
+            </ul>
+            
+          </nav>
+        </div>
+        </div>
+      </header>
+
+      <br>
+      <br>
+      <br>
+        <div class="heading">
+            <h1>OUR MENU</h1>
+        </div>
+        <div class="products-container">
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/imgg1.jpg') }}" alt="Americano">
+                <h2>late</h2>
+                <div class="content">
+                    <span>$25</span>
+                    <form action="{{ url_for('cart') }}" method="POST">
+                        <button type="submit" class="add-to-cart">Add to cart</button>
+                    </form>
+                </div>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/imgg2.jpg') }}" alt="Chocolate">
+                <h2>chocolate mocka</h2>
+                <div class="content">
+                    <span>$25</span>
+                    <form action="{{ url_for('cart') }}" method="POST">
+                        <button type="submit" class="add-to-cart">Add to cart</button>
+                    </form>
+                </div>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/imgg3.jpg') }}" alt="Americano">
+                <h2>boba</h2>
+                <div class="content">
+                    <span>$25</span>
+                    <form action="{{ url_for('cart') }}" method="POST">
+                        <button type="submit" class="add-to-cart">Add to cart</button>
+                    </form>
+                </div>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/imgg4.jpg') }}" alt="Americano">
+                <h2>espresso</h2>
+                <div class="content">
+                    <span>$25</span>
+                    <form action="{{ url_for('cart') }}" method="POST">
+                        <button type="submit" class="add-to-cart">Add to cart</button>
+                    </form>
+                </div>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/imgg5.jpg') }}" alt="Americano">
+                <h2>cinnamon Coffee</h2>
+                <div class="content">
+                    <span>$25</span>
+                    <form action="{{ url_for('cart') }}" method="POST">
+                        <button type="submit" class="add-to-cart">Add to cart</button>
+                    </form>
+                </div>
+            </div>
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/imgg6.jpg') }}" alt="Americano">
+                <h2>iced latte</h2>
+                <div class="content">
+                    <span>$25</span>
+                    <form action="{{ url_for('cart') }}" method="POST">
+                        <button type="submit" class="add-to-cart">Add to cart</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

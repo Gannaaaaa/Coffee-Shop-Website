@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up and Login with Video Background</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'styles/style.css')}}">
+</head>
+<body>
+    
+    <video autoplay muted loop id="bg-video">
+        <source src="{{ url_for('static', filename = 'WhatsApp Video 2024-09-25 at 5.57.57 PM.mp4') }}" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div class="container">
+        
+        <div class="form-container signup-container">
+            <form action="#" method="POST">
+                <h2>Sign Up</h2>
+                <input type="text" placeholder="username" required name="username">
+                <input type="text" placeholder="phone number" name="phone" >
+                <input type="password" placeholder="password" required name="password">
+                <button type="submit">Sign Up</button>
+                <a href="{{ url_for('login') }}" class="switch-form">Already have an account? Login</a>
+            </form>
+        </div>
+
+        <div>
+            <br>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename = 'js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/static/images/imgg11.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  header {
+      position: absolute;
+      left: 0;
+      width: 80%;
+      text-align: center;
+      margin-left: 10%;
+      z-index: 2;
+        }
+        header::after{
+          content: "";
+          background-color: azure;
+          width: calc(100% - 30px);
+          position: absolute;
+          bottom: 24px;
+          left: 15px;
+          height: 1px;
+        }
+        header .container{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              position: relative;
+              min-height: 97px;
+        }
+        header nav ul li a {
+          padding: 15px !important;
+        }
+        header nav ul li a {
+         padding: 40px 10px;
+         text-decoration: none;
+         z-index: 2;
+         color: white;
+         display: block;
+         position: relative;
+        }
+        header nav ul li a:hover{
+          border-bottom: 2px black solid;
+        }
+        header nav{     
+          display: flex;
+          flex: 1;
+          align-items: center;
+          justify-content: center;
+        }
+        header nav ul {
+          display: flex;
+          list-style: none;
+        }
+
+
+.heading{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.heading h1{
+    font-size: 3rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 1rem;
+    
+}
+
+.hover {
+    transform: scale(1.1); /* Example: Scales the element */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+
+.products-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .products-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 boxes per row on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .products-container {
+        grid-template-columns: 1fr; /* 1 box per row on mobile */
+    }
+}
+
+.products-container .box{
+    position: relative;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: 3px solid transparent;
+    background: rgba(30 36 49 / 70%);
+}
+
+.products-container .box h2 {
+    text-align: center;
+    color: aliceblue;
+}
+
+.products-container .box .content{
+    display: flex;
+    align-items: center;
+    text-align: center; 
+    justify-content: space-around;
+    color: aliceblue;
+}
+
+.products-container img {
+    width: 100%;
+    height: auto; /* Adjust height to maintain aspect ratio */
+    max-height: 300px; /* Adjust maximum height as needed */
+    object-fit: cover; /* Cover the box with the image */
+    object-position: center;
+    border-radius: 0.5rem;
+}
+
+
+.products-container .box.hover {
+    transform: scale(1.1); /* enlarges the box */
+}
+
+
+.products-container .box .content a{
+    padding: 0.1rem;
+    color:rgb(73, 67, 67);
+    border: 2px solid;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: rgb(129, 142, 153);
+}
+
+.products-container .box .content a:hover {
+    color: rgb(73, 67, 67);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+
+.products-container .box .content .add-to-cart:hover {
+    background-color: #fff;
+    color: rgb(73, 67, 67);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
